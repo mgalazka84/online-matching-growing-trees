@@ -5,7 +5,7 @@ The model has attachment weights 1 + outdegree; the total at time n is
 2*n - 1. Time n means n vertices are present, before arrival n+1. Edges
 may only be accepted at arrival. The horizon N counts vertices.
 
-Dependencies: Python >= 3.9, numpy, matplotlib, mpmath.
+Dependencies: Python >= 3.11 for the pinned versions, numpy, matplotlib, mpmath.
 Run: python reproduce.py [--horizons 100 500 ...] [--threshold-horizon 10000]
 """
 

@@ -9,6 +9,7 @@ The manuscript specifies the exact Git commit used as its reproducibility snapsh
 ## Requirements and use
 
 The supplied run uses Python 3.12 with `numpy`, `matplotlib`, and `mpmath`.
+The pinned dependency versions require Python 3.11 or newer.
 Install the recorded dependency versions for reproduction:
 
 ```sh
