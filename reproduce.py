@@ -270,7 +270,7 @@ def comparison_figure(directory, records):
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--horizons", nargs="+", type=int,
-                        default=[100, 500, 1000, 5000, 10000])
+                        default=[100, 500, 1000, 5000, 10000, 20000, 40000, 80000])
     parser.add_argument("--threshold-horizon", type=int, default=10000)
     parser.add_argument("--output-dir", type=Path, default=Path(__file__).resolve().parent)
     arguments = parser.parse_args()

@@ -1,0 +1,258 @@
+{
+  "scope": "Computational and algebraic audit, not formal proof verification.",
+  "analytic_certificate": {
+    "S5_upper_exact": "157132807481/315000000000",
+    "Gamma_lower_exact": "157867192519/630000000000",
+    "Gamma_lower_decimal": 0.250582845268254,
+    "all_rational_inequalities": true
+  },
+  "uniform_exact_optimality_horizons": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "age_exact_checks": [
+    {
+      "model": "young",
+      "N": 1,
+      "expectation_exact": "0"
+    },
+    {
+      "model": "old",
+      "N": 1,
+      "expectation_exact": "0"
+    },
+    {
+      "model": "young",
+      "N": 2,
+      "expectation_exact": "1"
+    },
+    {
+      "model": "old",
+      "N": 2,
+      "expectation_exact": "1"
+    },
+    {
+      "model": "young",
+      "N": 3,
+      "expectation_exact": "1"
+    },
+    {
+      "model": "old",
+      "N": 3,
+      "expectation_exact": "1"
+    },
+    {
+      "model": "young",
+      "N": 4,
+      "expectation_exact": "3/2"
+    },
+    {
+      "model": "old",
+      "N": 4,
+      "expectation_exact": "7/6"
+    },
+    {
+      "model": "young",
+      "N": 5,
+      "expectation_exact": "37/20"
+    },
+    {
+      "model": "old",
+      "N": 5,
+      "expectation_exact": "17/12"
+    },
+    {
+      "model": "young",
+      "N": 6,
+      "expectation_exact": "133/60"
+    },
+    {
+      "model": "old",
+      "N": 6,
+      "expectation_exact": "17/10"
+    },
+    {
+      "model": "young",
+      "N": 7,
+      "expectation_exact": "16271/6300"
+    },
+    {
+      "model": "old",
+      "N": 7,
+      "expectation_exact": "419/210"
+    },
+    {
+      "model": "young",
+      "N": 8,
+      "expectation_exact": "52007/17640"
+    },
+    {
+      "model": "old",
+      "N": 8,
+      "expectation_exact": "13487/5880"
+    }
+  ],
+  "pa_labeled_state_checks": [
+    {
+      "N": 1,
+      "optimal_exact": "0",
+      "greedy_exact": "0"
+    },
+    {
+      "N": 2,
+      "optimal_exact": "1",
+      "greedy_exact": "1"
+    },
+    {
+      "N": 3,
+      "optimal_exact": "1",
+      "greedy_exact": "1"
+    },
+    {
+      "N": 4,
+      "optimal_exact": "19/15",
+      "greedy_exact": "6/5"
+    },
+    {
+      "N": 5,
+      "optimal_exact": "158/105",
+      "greedy_exact": "10/7"
+    },
+    {
+      "N": 6,
+      "optimal_exact": "1664/945",
+      "greedy_exact": "5/3"
+    },
+    {
+      "N": 7,
+      "optimal_exact": "2327/1155",
+      "greedy_exact": "21/11"
+    }
+  ],
+  "rational_monotonicity_horizons": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50
+  ],
+  "rational_vs_float64_max_value_error": 5.329070518200751e-15,
+  "rational_vs_float64_threshold_differences": [],
+  "affine_greedy_exact_mean_checks": 490,
+  "exact_deferral_forward_backward_checks": 80,
+  "independent_forward_policy_checks": [
+    {
+      "N": 100,
+      "optimal_backward": 25.996354802353054,
+      "threshold_forward": 25.996354802353054,
+      "deferral_backward": 25.817793322043073,
+      "deferral_forward": 25.817793322043062
+    },
+    {
+      "N": 500,
+      "optimal_backward": 128.81459095535038,
+      "threshold_forward": 128.8145909553505,
+      "deferral_backward": 127.97583161502659,
+      "deferral_forward": 127.97583161502665
+    },
+    {
+      "N": 1000,
+      "optimal_backward": 257.2950273952675,
+      "threshold_forward": 257.29502739526737,
+      "deferral_backward": 255.66522259202534,
+      "deferral_forward": 255.6652225920255
+    },
+    {
+      "N": 5000,
+      "optimal_backward": 1285.042992111158,
+      "threshold_forward": 1285.0429921111402,
+      "deferral_backward": 1277.1879920255112,
+      "deferral_forward": 1277.187992025495
+    },
+    {
+      "N": 10000,
+      "optimal_backward": 2569.704014804967,
+      "threshold_forward": 2569.7040148051096,
+      "deferral_backward": 2554.095122950078,
+      "deferral_forward": 2554.09512295022
+    }
+  ],
+  "gamma_60_digits": "0.25538168387600494205473175858093633184526428946406",
+  "gamma_80_digits": "0.2553816838760049420547317585809363318452642894640622244014973817251535",
+  "age_kernel_masses": {
+    "young": "0.567667641618306345946999747486242201703815772954787940734079",
+    "old": "0.402735975267337443192393134856248046704921107362038168978218"
+  },
+  "age_density_limits": {
+    "young": "0.362109688653330841778696252947187759511866727948755405712423",
+    "old": "0.287107468809718711719333479667122003210603774345930883523095"
+  },
+  "stored_table_horizons_recomputed": [
+    100,
+    500,
+    1000,
+    5000,
+    10000,
+    20000,
+    40000,
+    80000
+  ],
+  "all_9999_stored_thresholds_recomputed": true,
+  "precision_note": "Float64 computations are not interval certificates; longdouble may equal float64 on some platforms.",
+  "versions": {
+    "numpy": "2.3.5",
+    "mpmath": "1.4.1",
+    "longdouble_mantissa_bits": 63
+  }
+}

@@ -1,8 +1,10 @@
-# Online matching in growing random trees
+# Reproducible numerical calculations
 
 Supplement to **Online matching in growing random trees: how attachment shapes optimal decisions**, by Marek Gałązka and Hanna Wdowicka.
 
 Repository: https://github.com/mgalazka84/online-matching-growing-trees
+
+The manuscript specifies the exact Git commit used as its reproducibility snapshot.
 
 ## Requirements and use
 
@@ -14,7 +16,7 @@ python -m pip install -r requirements.txt
 python reproduce.py
 ```
 
-The default run evaluates horizons 100, 500, 1000, 5000, and 10000; generates
+The default run evaluates all eight manuscript horizons, from 100 through 80000; generates
 the threshold figure at N = 10000 and a policy-comparison figure; independently checks tiny horizons by
 exact enumeration; and evaluates the three-phase policy integral at two
 working precisions. To reproduce every supplied table row, run:
@@ -25,8 +27,7 @@ python reproduce.py --horizons 100 500 1000 5000 10000 20000 40000 80000
 
 Choose a different figure horizon with `--threshold-horizon N`, or a different
 output directory with `--output-dir PATH`. Output files in that directory are
-overwritten. Running the default command replaces the supplied eight-row
-density table with its five-row subset. No random sampling is used. Phase boundaries use exact integer floors, computed from rational parameters.
+overwritten. Choosing a custom horizon list replaces the density table with that selection. No random sampling is used. Phase boundaries use exact integer floors, computed from rational parameters.
 
 ## Model and indices
 
@@ -147,3 +148,30 @@ Suggested figure caption:
 > if its parent's current attachment weight is at most K_n. The curve is
 > obtained by floating-point evaluation of the exact backward recurrence;
 > it does not assert convergence to a limiting threshold profile.
+
+## Extended audit
+
+```sh
+python audit.py --full
+```
+
+This adds independent forward calculations and exact algebraic checks. It writes
+`audit_results.json` and `age_bias_checks.csv`. Omitting `--full` limits the
+recomputation of stored PA table rows to N <= 10000; the other checks still run.
+The original six-horizon checks in `reproduce.py` remain available. The audit
+extends labeled-state enumeration to N = 7 for preferential attachment and to
+N = 8 for uniform and both age-biased models. It also checks rational threshold
+monotonicity through N = 50, forward/backward policy values at five horizons
+through N = 10000, all stored thresholds, and 490 exact affine greedy means.
+
+The five-class certificate is reconstructed in the exact ring
+Q[sqrt(3), sqrt(5)], including coefficients obtained by a separate power-series
+expansion. Rational square and logarithm bounds imply
+
+    Gamma(3/20,9/20) > 157867192519/630000000000 > 0.2505828.
+
+This is an exact algebraic check of the certificate in the proof. It is distinct
+from the high-precision numerical estimate 0.255381683876... .
+The age-bias CSV gives deterministic marginal-probability calculations through
+N = 20000. These finite values approach the proved limits; they do not prove
+convergence by themselves. No formal proof assistant is used.
