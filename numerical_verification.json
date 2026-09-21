@@ -1,0 +1,14 @@
+{
+  "gamma_60_digit_quadrature": "0.25538168387600494205473175858093633184526428946406",
+  "gamma_80_digit_quadrature": "0.2553816838760049420547317585809363318452642894640622244014973817251535",
+  "gamma_note": "Numerical quadrature, not an interval-certified bound.",
+  "finite_horizon_note": "Float64 evaluations of an exact Bellman recurrence; no simulations.",
+  "small_horizons": "Exact rational equality with labeled-state enumeration for N=1,...,6.",
+  "deferral_checks": "Independent forward/backward rational expectations agree for N=1,...,40, for (a,b)=(3/20,9/20) and (1/3,2/3).",
+  "deferral_convention": "Reject for n<floor(3N/20); accept only weight 1 for floor(3N/20)<=n<floor(9N/20); greedy thereafter.",
+  "threshold_convention": "n vertices present before arrival n+1; accept feasible weight k iff k<=K_n.",
+  "threshold_horizon": 10000,
+  "numpy_version": "2.3.5",
+  "matplotlib_version": "3.10.8",
+  "mpmath_version": "1.4.1"
+}
